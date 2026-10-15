@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090b16">
+  <meta name="theme-color" content="#ebe6f9">
   <meta name="description" content="Aabha Karle — Data Science student exploring machine learning, biomedical AI, and data-driven research.">
   <title>Aabha Karle | Data Science & AI</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -140,7 +140,7 @@
           <div class="project-visual visual-eeg">
             <div class="signal-label">EEG / SIGNAL STUDY</div>
             <svg class="signal-chart" viewBox="0 0 520 170" role="img" aria-label="Illustrative EEG waveform">
-              <defs><linearGradient id="wave" x1="0" x2="1"><stop offset="0" stop-color="#8b7cff" stop-opacity=".15"/><stop offset=".5" stop-color="#b3a7ff"/><stop offset="1" stop-color="#55d6be" stop-opacity=".8"/></linearGradient></defs>
+              <defs><linearGradient id="wave" x1="0" x2="1"><stop offset="0" stop-color="#2f5fd6"/><stop offset=".5" stop-color="#6b58e0"/><stop offset="1" stop-color="#d63a85"/></linearGradient></defs>
               <g class="chart-lines"><path d="M0 34H520M0 68H520M0 102H520M0 136H520"/></g>
               <path class="wave-line" d="M0 87 L18 83 L29 91 L40 79 L51 87 L64 85 L75 91 L88 76 L100 88 L112 85 L124 89 L137 84 L148 91 L158 81 L169 87 L181 86 L194 90 L207 82 L218 86 L229 84 L239 88 L250 85 L260 88 L270 45 L278 125 L287 18 L296 147 L305 76 L315 91 L328 82 L340 88 L352 85 L363 90 L376 79 L387 88 L400 83 L412 91 L425 84 L439 88 L452 80 L464 87 L478 84 L490 91 L504 83 L520 87"/>
             </svg>
@@ -260,15 +260,18 @@
         <p class="eyebrow">06 / YOUR TURN</p>
         <h2>Have a question,<br>a project, or an <span class="gradient-text">idea?</span></h2>
         <p class="contact-copy">I'm always happy to connect about research, machine learning, interesting projects, and opportunities to learn.</p>
-        
-<a
-  class="button button-primary contact-email"
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=karle.aabha@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  Say hello <span>↗</span>
-</a>
+
+        <div class="hero-actions contact-email">
+          <a class="button button-primary" href="mailto:karle.aabha@gmail.com?subject=Hello%20Aabha">
+            Say hello <span>↗</span>
+          </a>
+          <button class="button button-quiet" id="copy-mail" type="button" style="cursor:pointer;">
+            <b id="copy-label" style="font-weight:inherit;">Copy email</b> <span>⧉</span>
+          </button>
+          <a class="button button-quiet" href="https://mail.google.com/mail/?view=cm&fs=1&to=karle.aabha@gmail.com&su=Hello%20Aabha" target="_blank" rel="noopener noreferrer">
+            Open in Gmail <span>↗</span>
+          </a>
+        </div>
 
         <div class="social-links">
           <a href="https://github.com/karleaabha-byte" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a>
@@ -284,5 +287,40 @@
     <p>Made with curiosity <span>✳</span> © <span id="year">2026</span></p>
     <a class="back-top" href="#top">BACK TO TOP ↑</a>
   </footer>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('copy-mail');
+      var label = document.getElementById('copy-label');
+      if (!btn) return;
+      var email = 'karle.aabha@gmail.com';
+
+      function done() {
+        label.textContent = 'Copied!';
+        setTimeout(function () { label.textContent = 'Copy email'; }, 1800);
+      }
+
+      btn.addEventListener('click', function () {
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(email).then(done, fallback);
+        } else {
+          fallback();
+        }
+      });
+
+      function fallback() {
+        var t = document.createElement('textarea');
+        t.value = email;
+        t.setAttribute('readonly', '');
+        t.style.position = 'fixed';
+        t.style.opacity = '0';
+        document.body.appendChild(t);
+        t.select();
+        t.setSelectionRange(0, email.length);
+        try { document.execCommand('copy'); done(); } catch (e) {}
+        document.body.removeChild(t);
+      }
+    })();
+  </script>
 </body>
 </html>
