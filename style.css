@@ -296,3 +296,310 @@ button { font: inherit; }
   .footer { flex-wrap: wrap; }
   .footer p { order: 3; width: 100%; }
 }
+
+/* =========================================
+   AABHA KARLE — BIO + HEALTH + DATA + WATER
+   Professional scientific identity
+   Append this to the END of your CSS file
+========================================= */
+
+:root {
+  --bg: #080f19;
+  --bg-soft: #0d1724;
+  --panel: rgba(17, 31, 45, 0.82);
+  --line: rgba(120, 190, 193, 0.18);
+
+  --text: #edf4f5;
+  --muted: #a3b5c2;
+
+  /* Ocean teal is primary; lavender is an accent */
+  --purple: #9bb9ee;
+  --purple-bright: #779bd8;
+  --mint: #76d9c4;
+
+  --font: "Manrope", sans-serif;
+  --mono: "DM Mono", monospace;
+}
+
+/* Background: deeper, more oceanic */
+body {
+  background:
+    radial-gradient(
+      ellipse at 75% 8%,
+      rgba(23, 81, 98, 0.13),
+      transparent 38%
+    ),
+    var(--bg);
+}
+
+.noise {
+  opacity: 0.055;
+}
+
+.ambient-one {
+  background: #3864a1;
+  opacity: 0.12;
+}
+
+.ambient-two {
+  background: #159c9b;
+  opacity: 0.13;
+}
+
+/* Navigation: understated research-lab aesthetic */
+.site-header {
+  background: rgba(8, 15, 25, 0.91);
+  border-bottom-color: rgba(120, 190, 193, 0.12);
+}
+
+.brand-mark span {
+  color: var(--mint);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--mint);
+}
+
+.nav-contact {
+  border-color: rgba(118, 217, 196, 0.32);
+}
+
+.nav-contact span {
+  color: var(--mint);
+}
+
+/* Typography: less neon, more professional */
+.eyebrow {
+  color: #91c9d2;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    110deg,
+    #d6e9f2 0%,
+    #91c9d2 55%,
+    #9bb9ee 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.period {
+  color: var(--mint);
+}
+
+.hero-intro {
+  color: #b5c5d0;
+}
+
+.hero-intro strong {
+  color: #f0f7f8;
+}
+
+/* Buttons */
+.button-primary {
+  background: linear-gradient(115deg, #347e87, #286d82);
+  box-shadow: 0 7px 24px rgba(39, 126, 139, 0.18);
+}
+
+.button-primary:hover {
+  box-shadow: 0 9px 30px rgba(39, 160, 165, 0.27);
+}
+
+.button-quiet {
+  border-color: rgba(120, 190, 193, 0.24);
+}
+
+.button-quiet:hover {
+  border-color: rgba(118, 217, 196, 0.55);
+}
+
+/* Hero illustration: biological + aquatic systems */
+.art-grid {
+  background-image:
+    linear-gradient(rgba(118, 190, 193, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(118, 190, 193, 0.15) 1px, transparent 1px);
+}
+
+.orbit {
+  border-color: rgba(118, 190, 193, 0.24);
+}
+
+.orbit-inner {
+  border-color: rgba(155, 185, 238, 0.28);
+}
+
+.orbit-tilt {
+  border-color: rgba(118, 217, 196, 0.35);
+}
+
+.core {
+  background:
+    radial-gradient(circle at 35% 25%, #214a55, #101d2b 70%);
+  border-color: rgba(118, 217, 196, 0.38);
+  box-shadow:
+    0 0 70px rgba(41, 139, 151, 0.14),
+    inset 0 0 35px rgba(118, 217, 196, 0.08);
+}
+
+.core-symbol {
+  color: #b2e6e1;
+  text-shadow: 0 0 25px rgba(118, 217, 196, 0.25);
+}
+
+.core-caption {
+  color: #b3d0d4;
+}
+
+.orbit-node {
+  background: var(--mint);
+  box-shadow: 0 0 14px rgba(118, 217, 196, 0.45);
+}
+
+.node-two {
+  background: var(--purple);
+}
+
+.floating-label {
+  background: rgba(11, 25, 37, 0.94);
+  border-color: rgba(120, 190, 193, 0.22);
+  color: #c2d9df;
+}
+
+/* About and project cards */
+.glass-panel,
+.skill-panel {
+  background: linear-gradient(
+    145deg,
+    rgba(21, 39, 52, 0.84),
+    rgba(12, 23, 36, 0.88)
+  );
+  border-color: var(--line);
+}
+
+.mini-card,
+.project-card {
+  background: rgba(13, 26, 39, 0.82);
+  border-color: rgba(120, 190, 193, 0.15);
+}
+
+.mini-number,
+.project-type {
+  color: #91c9d2;
+}
+
+.project-card:hover,
+.skill-panel:hover {
+  border-color: rgba(118, 217, 196, 0.42);
+}
+
+.filter-button:hover,
+.filter-button.active {
+  background: rgba(118, 217, 196, 0.09);
+  border-color: rgba(118, 217, 196, 0.4);
+  color: #d6f5f0;
+}
+
+.tag-list span,
+.skill-tags span {
+  border-color: rgba(120, 190, 193, 0.17);
+  color: #bbd0d9;
+}
+
+/* eDNA project visual */
+.visual-ocean {
+  background:
+    radial-gradient(ellipse at 50% 45%, #185365, #101c2b 75%);
+}
+
+.ocean-orb {
+  border-color: rgba(118, 217, 196, 0.55);
+}
+
+.orb-two {
+  border-color: rgba(155, 185, 238, 0.45);
+}
+
+.ocean-data,
+.ocean-bottom {
+  color: #a8dfda;
+}
+
+/* EEG / biomedical signal visual */
+.visual-eeg {
+  background:
+    radial-gradient(ellipse at 50% 45%, #173e4a, #101c2b 75%);
+}
+
+.signal-label {
+  color: #8fe5d3;
+}
+
+/* Timeline and research section */
+.timeline {
+  border-left-color: rgba(118, 190, 193, 0.26);
+}
+
+.timeline-marker {
+  border-color: var(--mint);
+  box-shadow: 0 0 12px rgba(118, 217, 196, 0.2);
+}
+
+.timeline-date,
+.research-stamp span {
+  color: #91c9d2;
+}
+
+/* Education */
+.education-card {
+  background: linear-gradient(
+    105deg,
+    rgba(22, 47, 60, 0.8),
+    rgba(12, 24, 37, 0.9)
+  );
+}
+
+.education-icon {
+  border-color: rgba(118, 217, 196, 0.3);
+  color: var(--mint);
+}
+
+/* Contact: clean and inviting */
+.contact-card {
+  border-color: rgba(118, 190, 193, 0.24);
+  background:
+    radial-gradient(
+      ellipse at 90% 10%,
+      rgba(36, 120, 132, 0.18),
+      transparent 46%
+    ),
+    linear-gradient(135deg, #132a39, #0c1725);
+}
+
+.contact-decoration {
+  color: rgba(118, 217, 196, 0.07);
+}
+
+.social-links span,
+.back-top:hover {
+  color: var(--mint);
+}
+
+/* Footer */
+.footer {
+  border-top-color: rgba(120, 190, 193, 0.12);
+}
+
+.footer p span {
+  color: var(--mint);
+}
+
+/* Mobile navigation */
+@media (max-width: 620px) {
+  .nav-links {
+    background: rgba(8, 15, 25, 0.99);
+  }
+}
+
